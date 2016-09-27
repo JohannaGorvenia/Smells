@@ -6,7 +6,7 @@ import java.util.Random;
 public class Taller {
 
     public static void main(String[] args) {
-        
+      
         //Duplicate Code - Long Method
             //Curso
             int curso;
@@ -19,7 +19,7 @@ public class Taller {
             n2 = randito.nextInt(21);
             n3 = randito.nextInt(21);        
             float prom;      
-
+ /* 
             if(curso == 1){
                 nombreCurso = "Matematica";
                 prom = (3*n1 + 3*n2 + 4*n3)/10;
@@ -38,7 +38,15 @@ public class Taller {
             }
             System.out.println("El promedio de " + nombreCurso + " es: "  + prom + "."); 
             
-                                  
+            */
+            
+             //Refactoring Duplicate Code - Long Method
+            Refactoring refactor1 = new Refactoring();
+            String asignatura = refactor1.obtenerCurso();
+            float promedio = refactor1.obtenerPromedio(n1, n2, n3);
+            System.out.println("El promedio de " + asignatura + " es: "  + promedio + ".");  
     }
+    
+    
     
 }
